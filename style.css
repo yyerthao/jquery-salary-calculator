@@ -6,23 +6,20 @@ if selecting element with CLASS: .  */
 
 body{
     background-color: white;
+    font-family: monospace;
 }
 
 #headerStyle {
     background-color: lightgray;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: monospace;
 }
 
-table{
-    border: 4px;
-    background: black;
-}
-
-th{
-    column-span: 2;
-    background-color: white;
+table, thead{
+    border: solid black 2px;
 }
 
 
-
-
+/* 
+Come back to do me! */
