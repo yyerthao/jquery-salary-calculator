@@ -6,14 +6,16 @@ function readyNow(){
     // on the click of the subButton, we run the submitInfo function
     $('#subButton').on('click', submitInfo);
 
-
 }
 
 
 
 function submitInfo(){
-    console.log('in submitInfo: ');
-// created variables to store the value of each input box
+    console.log('in submitInfo: '); // just for YER
+// created variable to store the value of each input box into
+// so that we can grab the object full of all values instead of
+// typing out more code throughout this script
+
     let employeeObject = {
     firstInput: $('#firstInput').val(),
     lastInput: $('#lastInput').val(),
@@ -21,14 +23,14 @@ function submitInfo(){
     titleInput: $('#titleInput').val(),
     salaryInput: $('#salaryInput').val()
     };
-
     console.log(employeeObject);
 }
 // Console log to ensure variables are working
+// 
+
 console.log('Testing submitInfo funct');
-
-// Can pass employeeObject to other functions using .notations
-
+// Can pass employeeObject to other functions using dot notations 
+// 
 
 
 
@@ -40,6 +42,18 @@ console.log('Testing submitInfo funct');
 
 
 // 
+
+
+
+
+
+
+
+
+
+
+
+
 // The application should have an input form that collects _
 // employee first name, last name, ID number, job title, annual salary_.
 
