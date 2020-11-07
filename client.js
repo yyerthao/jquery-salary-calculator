@@ -11,25 +11,73 @@ function readyNow(){
 
 
 function submitInfo(){
-    console.log('in submitInfo: '); // 
-// created variable to store the value of each input box into
+    console.log('in submitInfo:'); // 
+// created object variable to store the value of each input box into
 // so that we can grab the object full of all values instead of
 // typing out more code throughout this script
+// ALSO, can pass employeeObject to other functions using dot notations 
 
-    let employeeObject = {
-    firstInput: $('#firstInput').val(),
-    lastInput: $('#lastInput').val(),
-    idInput: $('#idInput').val(),
-    titleInput: $('#titleInput').val(),
-    salaryInput: $('#salaryInput').val()
+    let employee = {
+    firstName: $('#firstInput').val(),
+    lastName: $('#lastInput').val(),
+    idNum: $('#idInput').val(),
+    title: $('#titleInput').val(),
+    salary: $('#salaryInput').val()
     };
-    console.log(employeeObject);
+// console logging object variable to display input field values when clicking button
+
+    console.log(employee);
+// add append function here. 
+// We call it as soon as this current function gets called
+    append(employee);
+// call emptyInput function to set input field back to empty string
+    emptyInput(); 
 }
-// Console log to ensure variables are working
-// 
-
+// console log testing to ensure  -- return to me
 console.log('Testing submitInfo funct');
-// Can pass employeeObject to other functions using dot notations 
+
+function append(employee){
+    $('#table-content').append(`<th class="trow" id="fName">${employee.firstName}</th>`);
+    $('#table-content').append(`<th class="trow" id="fName">${employee.lastName}</th>`);
+    $('#table-content').append(`<th class="trow" id="fName">${employee.idNum}</th>`);
+    $('#table-content').append(`<th class="trow" id="fName">${employee.title}</th>`);
+    $('#table-content').append(`<th class="trow" id="fName">${employee.salary}</th>`);
+
+
+}
+
+
+// This function's goal is to set the values of the input fields back to empty strings
+function emptyInput(){
+    $('#firstInput').val(''),
+    $('#lastInput').val('')
+    $('#idInput').val('')
+    $('#titleInput').val('')
+    $('#salaryInput').val('')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 
 
 
@@ -41,39 +89,24 @@ console.log('Testing submitInfo funct');
 
 
 
-// 
 
 
-
-
-
-
-
-
-
-
-
-
-// The application should have an input form that collects _
-// employee first name, last name, ID number, job title, annual salary_.
 
 ////////////////////////////////////////////////////////////////////////////////////
+/* YER RECAP NOTES:
+- Created index.html, style.css, client.js, and jquery.js files.
+- Appropriately sourced in the files to html file
+- created a header with h1 tag named Salary Calculator
+- created h3 tag outside of header named Add Employee
+- created div to contain all input elements together 
+- created 5 input elements with different ids 
+- created second div to contain button element alone
+- created third div, created class element named container to embody
+- entire 
 
-// A 'Submit' button should collect the form information, store the information 
-// to calculate monthly costs, append information to the DOM and clear the input 
-// fields.
-
-// Using the stored information, calculate monthly costs and append this 
-// to the to DOM. 
 
 
-// If the total monthly cost exceeds $20,000, add a red background 
-// A 'Submit' button should collect the form information, store the information to 
-// calculate monthly costs, append information to the DOM and clear the input fields. 
-// Using the stored information, calculate monthly costs and append this to the to DOM. 
-// If the total monthly cost exceeds $20,000, add a red background color to the total 
-// monthly cost.color to the total monthly cost.
-
+*/
 ////////////////////////////////////////////////////////////////////////////////////
 
 

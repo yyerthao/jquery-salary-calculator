@@ -5,17 +5,23 @@ if selecting element with CLASS: .  */
 
 
 body{
-    background-color: gainsboro;
+    background-color: white;
 }
 
 #headerStyle {
-    background-color: cornflowerblue;
+    background-color: lightgray;
     padding: 10px;
 }
 
+table{
+    border: 4px;
+    background: black;
+}
 
-
-
+th{
+    column-span: 2;
+    background-color: white;
+}
 
 
 
