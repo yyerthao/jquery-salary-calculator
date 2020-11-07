@@ -20,6 +20,10 @@ No files have been provided (just instructions.md and a readme.md). Instead of f
 
 ![Wireframe](salary-calc-wireframe.png)
 
+
+
+
+
 ## Stretch Mode
 
 Add styling or extra functionality that fits with the theme of this assignment.
