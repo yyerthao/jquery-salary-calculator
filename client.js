@@ -4,14 +4,14 @@ $(document).ready(readyNow);
 function readyNow(){
     console.log('jq');
     // on the click of the subButton, we run the submitInfo function
-    $('#subButton').on('click', submitInfo);
+    $('#btn-add').on('click', submitInfo);
 
 }
 
 
 
 function submitInfo(){
-    console.log('in submitInfo: '); // just for YER
+    console.log('in submitInfo: '); // 
 // created variable to store the value of each input box into
 // so that we can grab the object full of all values instead of
 // typing out more code throughout this script

@@ -1,4 +1,22 @@
+/* 
+NOTES!
+if selecting element by ID: #
+if selecting element with CLASS: .  */
+
+
 body{
-    background-color: pink;
+    background-color: gainsboro;
 }
+
+#headerStyle {
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+
+
+
+
+
+
+
 
