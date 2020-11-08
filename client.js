@@ -5,6 +5,9 @@ function readyNow() {
     console.log('jq');
     // on the click of the subButton, we run the submitInfo function
     $('#btn-add').on('click', submitInfo);
+    // on the click into the table body created on the DOM, we're asking
+    // jquery to find anything with the class dButton, then run the 
+    // function deleteEntry
     $('#table-contents').on('click', '.dButton', deleteEntry)
 }
 
@@ -35,8 +38,6 @@ function submitInfo(event) {
     // call emptyInput function to set input field back to empty string
     emptyInput();
 }
-// console log testing to ensure  -- return to me
-console.log('Testing submitInfo funct');
 
 function append(employee) {
     // append employee properties of input values' to table td
@@ -61,9 +62,9 @@ function emptyInput() {
 }
 
 function deleteEntry() {
+    // this function is designed to delete the closest tr element and remove it
     console.log('in deleteEnry');
-
-
+    $(this.closest('tr')).remove();
 }
 
 
@@ -91,7 +92,7 @@ function deleteEntry() {
 // If the total monthly cost exceeds $20,000, add a red background color to the total 
 // monthly cost.
 
-// Create a delete button that removes an employee from the DOM. For Base mode, it does 
+// For Base mode, it does 
 // **not** need to remove that Employee's salary from the reported total.
 
 
@@ -111,21 +112,56 @@ function deleteEntry() {
 - created a header with h1 tag named Salary Calculator
 - created h3 tag outside of header named Add Employee
 - created div to contain all input elements together 
-- created 5 input elements with different ids 
-- created second div to contain button element alone
-- created third div, created class element named container to embody
-entire table elements 
-- created table tags, thead (table head), h3 tag for table name Employee, 
-- created tr tag - which is an element that holds the th (in table headers)
-- created th tags inside the in-head headers : First Name, Last Name... etc
-- closed tr tag
-- closed thead tag - this closes the element on table for in table header 
-- created table body tag to hold following:
-    - tr
+- created 5 input elements with different ids, with a button tag
+
+- table tag created
+    - thead tag created, means table head
+        - h3 tag created to give table a name
+        - tr tag created, means table row, which spans horizontally
+            -th tag created, means table head, created 6 spaces
+        - closed tr tag
+    - closed thead tag
+    - created tbody, means table body, gave it an id to access the space on the DOM
+    - initially created the skeleton of td tags on it in order to 
 
 
 
 
+
+    element.closest() 
+    https://www.youtube.com/watch?v=Eb5lyRn7lgk&ab_channel=dcode as courtesy of John
+
+    This method helps us grab the closest element to perform an action on.
+    In this assignment, I used it to grab the closest tr element in order to 
+    delete the correct employee and information off the table.
+
+THE FOLLOWING CODE FROM https://api.jquery.com/closest/ helped a lot
+// <ul id="one" class="level-1">
+//   <li class="item-i">I</li>
+//   <li id="ii" class="item-ii">II
+//     <ul class="level-2">
+//       <li class="item-a">A</li>
+//       <li class="item-b">B
+//         <ul class="level-3">
+//           <li class="item-1">1</li>
+//           <li class="item-2">2</li>
+//           <li class="item-3">3</li>
+//         </ul>
+//       </li>
+//       <li class="item-c">C</li>
+//     </ul>
+//   </li>
+//   <li class="item-iii">III</li>
+// </ul>
+// Suppose we perform a search for <ul> elements starting at item A:
+
+// $( "li.item-a" ).closest( "ul" ).css( "background-color", "red" );
+// This will change the color of the level-2 <ul>, since it is the first 
+// encountered when traveling up the DOM tree.
+
+
+Originally, I had $(this).remove() in my deleteEntry function and all it
+did was delete the button. Definitely a funny learning experience,
 
 
 

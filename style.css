@@ -21,11 +21,12 @@ body{
 
 .container{
     width: fit-content;
-    margin: auto;
+    margin: left;
 }
 
 #btn-add{
     margin: 10px;
+    background-color: pink;
 }
 
 
@@ -34,6 +35,19 @@ table, tr, td, th, thead{
     border-collapse: collapse;
 }
 
+
+/* Is there a better way to get my table header to expand the width? */
 th{
     width: 130px;
+    background-color: pink;
+}
+
+
+.inputDiv{
+    color: pink;
+}
+
+
+h3{
+    font-weight: bolder;
 }
