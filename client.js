@@ -1,57 +1,58 @@
 console.log('js');
 $(document).ready(readyNow);
 
-function readyNow(){
+function readyNow() {
     console.log('jq');
     // on the click of the subButton, we run the submitInfo function
     $('#btn-add').on('click', submitInfo);
+    $('#table-contents').on('click', '.dButton', deleteEntry)
 }
 
 
 
-function submitInfo(){
+function submitInfo(event) {
     // this method will stop page from page refresh as per lecture on Friday from Mary
     event.preventDefault()
     console.log('in submitInfo:'); // 
-// created object variable to store the value of each input box into
-// so that we can grab the object full of all values instead of
-// typing out more code throughout this script
-// ALSO, can pass employeeObject to other functions using dot notations 
+    // created object variable to store the value of each input box into
+    // so that we can grab the object full of all values instead of
+    // typing out more code throughout this script
+    // ALSO, can pass employeeObject to other functions using dot notations 
 
     let employee = {
-    firstName: $('#firstInput').val(),
-    lastName: $('#lastInput').val(),
-    idNum: $('#idInput').val(),
-    title: $('#titleInput').val(),
-    salary: $('#salaryInput').val()
+        firstName: $('#firstInput').val(),
+        lastName: $('#lastInput').val(),
+        idNum: $('#idInput').val(),
+        title: $('#titleInput').val(),
+        salary: $('#salaryInput').val()
     };
-// console logging object variable to display input field values when clicking button
+    // console logging object variable to display input field values when clicking button
 
     console.log(employee);
-// add append function here. 
-// We call it as soon as this current function gets called
+    // add append function here. 
+    // We call it as soon as this current function gets called
     append(employee);
-// call emptyInput function to set input field back to empty string
-    emptyInput(); 
+    // call emptyInput function to set input field back to empty string
+    emptyInput();
 }
 // console log testing to ensure  -- return to me
 console.log('Testing submitInfo funct');
 
-function append(employee){
-    $('#table-content').append(`
+function append(employee) {
+    // append employee properties of input values' to table td
+    $('#table-contents').append(`
             <tr>
-                <td id="fName">${employee.firstName}</td>
-                <td id="lName">${employee.lastName}</td>
-                <td id="iName">${employee.idNum}</td>
-                <td id="tName">${employee.title}</td>
-                <td id="sName">${employee.salary}</td>
-                <th><button id="dButton">Delete</button></th>
+                <td class="fName">${employee.firstName}</td>
+                <td class="lName">${employee.lastName}</td>
+                <td class="iName">${employee.idNum}</td>
+                <td class="tName">${employee.title}</td>
+                <td class="sName">${employee.salary}</td>
+                <th><button class="dButton">Delete</button></th>
             </tr>`);
 }
 
-
 // This function's goal is to set the values of the input fields back to empty strings
-function emptyInput(){
+function emptyInput() {
     $('#firstInput').val('');
     $('#lastInput').val('');
     $('#idInput').val('');
@@ -59,6 +60,11 @@ function emptyInput(){
     $('#salaryInput').val('');
 }
 
+function deleteEntry() {
+    console.log('in deleteEnry');
+
+
+}
 
 
 
@@ -81,9 +87,12 @@ function emptyInput(){
 
 
 
-// 
+// Using the stored information, calculate monthly costs and append this to the to DOM. 
+// If the total monthly cost exceeds $20,000, add a red background color to the total 
+// monthly cost.
 
-
+// Create a delete button that removes an employee from the DOM. For Base mode, it does 
+// **not** need to remove that Employee's salary from the reported total.
 
 
 
@@ -129,12 +138,3 @@ entire table elements
 
  */
 ////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-

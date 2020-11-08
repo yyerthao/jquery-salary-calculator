@@ -6,20 +6,34 @@ if selecting element with CLASS: .  */
 
 body{
     background-color: white;
-    font-family: monospace;
+    font-family: 'Open Sans Condensed',
+    sans-serif;
 }
 
 #headerStyle {
     background-color: lightgray;
     padding: 20px;
     text-align: center;
-    font-family: monospace;
+    font-family: 'Open Sans Condensed',
+    sans-serif;
 }
 
-table, thead{
+
+.container{
+    width: fit-content;
+    margin: auto;
+}
+
+#btn-add{
+    margin: 10px;
+}
+
+
+table, tr, td, th, thead{
     border: solid black 2px;
+    border-collapse: collapse;
 }
 
-
-/* 
-Come back to do me! */
+th{
+    width: 130px;
+}

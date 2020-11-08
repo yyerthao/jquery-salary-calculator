@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@100;600&family=Open+Sans+Condensed:wght@300&display=swap"
+        rel="stylesheet">
     <script src="jquery-3.5.1.min.js"></script>
     <script src="client.js"></script>
 </head>
@@ -14,41 +17,34 @@
     <header id="headerStyle">
         <h1>Salary Calculator</h1>
     </header>
-    <h3>Add Employee</h3>
-    <div>
-        <input type="text" id="firstInput" placeholder="First Name">
-        <input type="text" id="lastInput" placeholder="Last Name">
-        <input type="text" id="idInput" placeholder="ID">
-        <input type="text" id="titleInput" placeholder="Title">
-        <input type="text" id="salaryInput" placeholder="Annual Salary">
-    </div>
-    <div id="submitButton">
-        <button id="btn-add">Submit</button>
-    </div>
+    <div class="container">
+        <h3>Add Employee</h3>
+        <div>
+            <input type="text" id="firstInput" placeholder="First Name">
+            <input type="text" id="lastInput" placeholder="Last Name">
+            <input type="text" id="idInput" placeholder="ID">
+            <input type="text" id="titleInput" placeholder="Title">
+            <input type="text" id="salaryInput" placeholder="Annual Salary">
+            <button id="btn-add">Submit</button>
+        </div>
 
-    <div class="container"></div>
-    <table id="table-content">
-        <thead>
-            <h3>Employees</h3>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="fName"></td>
-                <td id="lName"></td>
-                <td id="iName"></td>
-                <td id="tName"></td>
-                <td id="sName"></td>
-            </tr>
-        </tbody>
-    </table>
-    </div> 
+
+        <table>
+            <thead>
+                <h3>Employees</h3>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Salary</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-contents">
+            </tbody>
+        </table>
+    </div>
 
 
 
@@ -60,33 +56,16 @@
 
 <!-- 
 
-
 NOTES:
 th = header of the table 
-tr = row
-td = table data (column)
-
-
-<table>
-    <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Salary</th>
-        </tr>
-    </thead>
-</table>
-
+tr = (row) =   =   =   =   =
+td = table data (column) ||   ||   ||   || 
 
 -->
 
 
-<!-- Yer's Recap
-    - created input fields 
-    -
-    -
+<!-- Yer's Notes
+    - Used font.google.com to create library of font, linked it onto html file, courtesy of John 
     -
     -
     -
