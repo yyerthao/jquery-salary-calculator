@@ -98,7 +98,7 @@ function monthly() {
         sum += totalSalary[i];
 
     }
-    let sumMonthly = Math.round(sum/12);
+    let sumMonthly = Math.round(sum / 12);
     $('#totalMonth').append(`Total Monthly: $ <span id="monthlyCost">${sumMonthly}</span>`);
 }
 
