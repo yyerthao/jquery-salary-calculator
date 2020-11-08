@@ -100,6 +100,9 @@ function monthly() {
     }
     let sumMonthly = Math.round(sum / 12);
     $('#totalMonth').append(`Total Monthly: $ <span id="monthlyCost">${sumMonthly}</span>`);
+    if (sumMonthly > 20000) {
+        console.log('conditional is working');
+    }
 }
 
 

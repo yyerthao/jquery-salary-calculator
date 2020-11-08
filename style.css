@@ -4,10 +4,10 @@ if selecting element by ID: #
 if selecting element with CLASS: .  */
 
 
-body{
+body {
     background-color: white;
     font-family: 'Open Sans Condensed',
-    sans-serif;
+        sans-serif;
 }
 
 #headerStyle {
@@ -15,46 +15,55 @@ body{
     padding: 20px;
     text-align: center;
     font-family: 'Open Sans Condensed',
-    sans-serif;
+        sans-serif;
 }
 
 
-.container{
+.container {
     width: fit-content;
     margin: left;
 }
 
-#btn-add{
+#btn-add {
     margin: 10px;
     background-color: pink;
 }
 
 
-table, tr, td, th, thead{
+table, tr, td, th, thead {
     border: solid black 2px;
     border-collapse: collapse;
 }
 
 
-/* Is there a better way to get my table header to expand the width? */
-th{
-    width: 130px;
+th {
+    width: 140px;
     background-color: pink;
 }
 
 
-.inputDiv{
+.inputDiv {
     color: pink;
+    padding-left: 5px;
 }
 
 
-h3{
+h3 {
     font-weight: bolder;
 }
 
 #totalMonth {
-    float: left;
+    float: right;
+    border: solid black 2px;
 }
 
+.t {
+    background-color: red;
+}
+
+/* Float property when applied, will float the selected
+element to the position chosen, of its container  
+https: //developer.mozilla.org/en-US/docs/Web/CSS/float
+*/
 
 
