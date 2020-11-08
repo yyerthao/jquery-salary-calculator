@@ -86,6 +86,7 @@ function deleteEntry() {
     // this function is designed to delete the closest tr element and remove it
     console.log('in deleteEnry');
     $(this.closest('tr')).remove();
+    monthly();
 }
 
 // 
@@ -102,8 +103,12 @@ function monthly() {
     $('#totalMonth').append(`Total Monthly: $ <span id="monthlyCost">${sumMonthly}</span>`);
     if (sumMonthly > 20000) {
         console.log('conditional is working');
+        $('#totalMonth').addClass('red');
+    } else {
+        $('#totalMonth').removeClass('red');
     }
 }
+
 
 
 
@@ -171,7 +176,6 @@ THE FOLLOWING CODE FROM https://api.jquery.com/closest/ helped a lot
 // $( "li.item-a" ).closest( "ul" ).css( "background-color", "red" );
 // This will change the color of the level-2 <ul>, since it is the first 
 // encountered when traveling up the DOM tree.
-
 
 
 

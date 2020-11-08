@@ -57,7 +57,11 @@ h3 {
     border: solid black 2px;
 }
 
-.t {
+
+
+/* Created this tag in css file for javascript file to grab onto
+in our addClass  */
+.red {
     background-color: red;
 }
 
@@ -65,5 +69,3 @@ h3 {
 element to the position chosen, of its container  
 https: //developer.mozilla.org/en-US/docs/Web/CSS/float
 */
-
-
