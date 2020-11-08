@@ -51,3 +51,7 @@ th{
 h3{
     font-weight: bolder;
 }
+
+#totalMonth {
+    float: left;
+}

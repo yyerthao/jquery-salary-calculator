@@ -1,6 +1,9 @@
 console.log('js');
 $(document).ready(readyNow);
 
+const budget = 20000;
+let purchase = [];
+
 function readyNow() {
     console.log('jq');
     // on the click of the subButton, we run the submitInfo function
@@ -9,14 +12,19 @@ function readyNow() {
     // jquery to find anything with the class dButton, then run the 
     // function deleteEntry
     $('#table-contents').on('click', '.dButton', deleteEntry)
+    let el = $('#monthlyCost');
+    el.empty();
+    el.append(budget);
+
 }
 
 
-
+// This function grabs input values and stores into an object, logs it ont
+// console, appends its onto table, and empties input fields again
 function submitInfo(event) {
     // this method will stop page from page refresh as per lecture on Friday from Mary
     event.preventDefault()
-    console.log('in submitInfo:'); // 
+    console.log('in submitInfo:');
     // created object variable to store the value of each input box into
     // so that we can grab the object full of all values instead of
     // typing out more code throughout this script
@@ -39,7 +47,9 @@ function submitInfo(event) {
     emptyInput();
 }
 
+// This function appends employee onto table
 function append(employee) {
+    console.log('inside append');
     // append employee properties of input values' to table td
     $('#table-contents').append(`
             <tr>
@@ -52,8 +62,9 @@ function append(employee) {
             </tr>`);
 }
 
-// This function's goal is to set the values of the input fields back to empty strings
+// This function sets the values of the input fields back to empty strings
 function emptyInput() {
+    console.log('inside emptyInput');
     $('#firstInput').val('');
     $('#lastInput').val('');
     $('#idInput').val('');
@@ -61,6 +72,7 @@ function emptyInput() {
     $('#salaryInput').val('');
 }
 
+// This function deletes the correct tr when delete button is clicked
 function deleteEntry() {
     // this function is designed to delete the closest tr element and remove it
     console.log('in deleteEnry');
@@ -68,8 +80,10 @@ function deleteEntry() {
 }
 
 
-
-
+function add(){
+    console.log('nside add');
+    
+}
 
 
 
@@ -166,6 +180,11 @@ did was delete the button. Definitely a funny learning experience,
 
 
 
+SUNDAY GOAL:
+1. grab the values of salary input field
+2. store it into a variable
+3. 
+4. 
 
 
 
