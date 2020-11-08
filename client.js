@@ -42,7 +42,7 @@ function submitInfo(event) {
         title: $('#titleInput').val(),
         // used Math.round to round to nearest integer
         // used Number to ensure salary input returns a number
-        salary: Math.round(Number(($('#salaryInput').val())))
+        salary: Math.round($('#salaryInput').val())
     };
     // push our employee salary property into totalSalary array so we can
     totalSalary.push(employee.salary);
@@ -88,6 +88,7 @@ function deleteEntry() {
     $(this.closest('tr')).remove();
 }
 
+// 
 function monthly() {
     console.log('------------------- in monthly -------------------');
     let sum = 0;
@@ -95,102 +96,23 @@ function monthly() {
     el.empty();
     for (let i = 0; i < totalSalary.length; i++) {
         sum += totalSalary[i];
+
     }
-    $('#totalMonth').append(`<span id="monthlyCost">${sum}</span>`);
+    let sumMonthly = Math.round(sum/12);
+    $('#totalMonth').append(`Total Monthly: $ <span id="monthlyCost">${sumMonthly}</span>`);
 }
 
 
 
-// 
 
+// .addClass(‘class’) - https://api.jquery.com/addclass/
+// Adds the specified class(es) to each element in the set of matched elements.
 
+// .removeClass(‘class’) - https://api.jquery.com/removeclass/
+//  Remove a single class, multiple classes, or all classes from each 
+// element in the set of matched elements.
 
-
-
-
-
-
-
-// let budget += employee.salary / 12 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Testing variables to check their values
-// console.log(totalCost);
-// console.log(budget);
-// console.log(totalSalary); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// DO NOT forget to take total cost / 12  to get monthly cost
+// $(#selector).removeClass(‘class’)
 
 
 ////////////////////////////////////////////////////////////////////////////////////
