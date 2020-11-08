@@ -1,20 +1,25 @@
-console.log('js');
+// console.log('js'); no longer need this, js is working fine, commenting out to clean console
 $(document).ready(readyNow);
 
+// set a budget variable of 0, so we can add to this variable with  all salary input values
 const budget = 20000;
-let purchase = [];
+// created a global array to store employee salary property in so we can loop through
+const totalSalary = [];
 
+// this function will run as soon as DOM is fully loaded
+// buttons and table onevent handlers are ready and available for user interaction
+// once buttons are clicked, all associated functions in pair with onevent handlers,
+// will execute appropriately 
 function readyNow() {
-    console.log('jq');
+    console.log('------------------- inside readyNow -------------------');
     // on the click of the subButton, we run the submitInfo function
     $('#btn-add').on('click', submitInfo);
     // on the click into the table body created on the DOM, we're asking
     // jquery to find anything with the class dButton, then run the 
-    // function deleteEntry
+    // function deleteEntry 
     $('#table-contents').on('click', '.dButton', deleteEntry)
-    let el = $('#monthlyCost');
-    el.empty();
-    el.append(budget);
+    // grab span id monthly cost and store into a variable
+    // append our budget variable to el so we can display to dom the input salaries
 
 }
 
@@ -24,7 +29,7 @@ function readyNow() {
 function submitInfo(event) {
     // this method will stop page from page refresh as per lecture on Friday from Mary
     event.preventDefault()
-    console.log('in submitInfo:');
+    console.log(' ------------------- in submitInfo: -------------------');
     // created object variable to store the value of each input box into
     // so that we can grab the object full of all values instead of
     // typing out more code throughout this script
@@ -35,10 +40,13 @@ function submitInfo(event) {
         lastName: $('#lastInput').val(),
         idNum: $('#idInput').val(),
         title: $('#titleInput').val(),
-        salary: $('#salaryInput').val()
+        // used Math.round to round to nearest integer
+        // used Number to ensure salary input returns a number
+        salary: Math.round(Number(($('#salaryInput').val())))
     };
+    // push our employee salary property into totalSalary array so we can
+    totalSalary.push(employee.salary);
     // console logging object variable to display input field values when clicking button
-
     console.log(employee);
     // add append function here. 
     // We call it as soon as this current function gets called
@@ -49,7 +57,7 @@ function submitInfo(event) {
 
 // This function appends employee onto table
 function append(employee) {
-    console.log('inside append');
+    console.log('------------------- inside append -------------------');
     // append employee properties of input values' to table td
     $('#table-contents').append(`
             <tr>
@@ -60,11 +68,12 @@ function append(employee) {
                 <td class="sName">${employee.salary}</td>
                 <th><button class="dButton">Delete</button></th>
             </tr>`);
+    monthly();
 }
 
 // This function sets the values of the input fields back to empty strings
 function emptyInput() {
-    console.log('inside emptyInput');
+    console.log('------------------- inside emptyInput -------------------');
     $('#firstInput').val('');
     $('#lastInput').val('');
     $('#idInput').val('');
@@ -79,14 +88,30 @@ function deleteEntry() {
     $(this.closest('tr')).remove();
 }
 
-
-function add(){
-    console.log('nside add');
-    
+function monthly() {
+    console.log('------------------- in monthly -------------------');
+    let sum = 0;
+    let el = $('#totalMonth');
+    el.empty();
+    for (let i = 0; i < totalSalary.length; i++) {
+        sum += totalSalary[i];
+    }
+    $('#totalMonth').append(`<span id="monthlyCost">${sum}</span>`);
 }
 
 
 
+// 
+
+
+
+
+
+
+
+
+
+// let budget += employee.salary / 12 
 
 
 
@@ -102,12 +127,6 @@ function add(){
 
 
 
-// Using the stored information, calculate monthly costs and append this to the to DOM. 
-// If the total monthly cost exceeds $20,000, add a red background color to the total 
-// monthly cost.
-
-// For Base mode, it does 
-// **not** need to remove that Employee's salary from the reported total.
 
 
 
@@ -117,6 +136,61 @@ function add(){
 
 
 
+
+
+
+
+
+
+
+
+// Testing variables to check their values
+// console.log(totalCost);
+// console.log(budget);
+// console.log(totalSalary); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DO NOT forget to take total cost / 12  to get monthly cost
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -174,22 +248,7 @@ THE FOLLOWING CODE FROM https://api.jquery.com/closest/ helped a lot
 // encountered when traveling up the DOM tree.
 
 
-Originally, I had $(this).remove() in my deleteEntry function and all it
-did was delete the button. Definitely a funny learning experience,
 
-
-
-
-SUNDAY GOAL:
-1. grab the values of salary input field
-2. store it into a variable
-3. 
-4. 
-
-
-
-
-    
 
  */
 ////////////////////////////////////////////////////////////////////////////////////
