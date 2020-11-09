@@ -107,13 +107,6 @@ function monthly() {
 }
 
 
-
-/*
-
-Able to add red background to total monthly box, however unable to remove the class.
-
-*/
-
 // .text()
 
 
