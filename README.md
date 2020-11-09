@@ -1,4 +1,4 @@
-![MIT LICENSE](https://img.shields.io/github/license/yyerthao/jquery-salary-calculator.svg?style=flat-square)
+![MIT LICENSE](https://img.shields.io/github/license/yyerthao/jquery-salary-calculator?style=flat-square)
 ![REPO SIZE](https://img.shields.io/github/repo-size/yyerthao/jquery-salary-calculator.svg?style=flat-square)
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/yyerthao/jquery-salary-calculator.svg?style=flat-square)
 ![FORKS](https://img.shields.io/github/forks/yyerthao/jquery-salary-calculator.svg?style=social)
@@ -7,15 +7,15 @@
 
 ## Description
 
-_Duration: 20 hour project_
+_Duration: 20 hours_
 
 This application allows user to add employees to see how much it will cost to pay them.
 
 ## Screen Shot
 
-![intro](projectsalarycalculator.png)
-Image displays three employees with salary inputs.
-Total cost of salary input has exceeded this sample company's monthly budget of $20,000.00
+![intro](salarycalc.png)
+Image should display employees with salary inputs.
+If total cost of salary inputs have exceeded this sample company's monthly budget of $20,000.00, alert red on total monthly box.
 
 ## Installation
 
@@ -23,13 +23,12 @@ Total cost of salary input has exceeded this sample company's monthly budget of 
 
 ## Usage
 
-1. Input values into input fields 
-2. Click submit to append employee info onto table
+1. Input values onto input fields 
+2. Click submit to append employee information onto table
 3. Salary of employee will get calculated and added 
 onto box that says Total Monthly $
-4. The budget for paying employees is $20,000
-5. Delete appropriate employee if payroll budge is exceeded
-(Total Monthly box will light red when exceeded)
+4. Delete appropriate employee if payroll budge is exceeded
+(Total Monthly box will light red when company's budget is exceeded)
 
 
 ## Built With

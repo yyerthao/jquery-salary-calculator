@@ -6,6 +6,7 @@ const budget = 20000;
 // created a global array to store employee salary property in so we can loop through
 const totalSalary = [];
 
+
 // this function will run as soon as DOM is fully loaded
 // buttons and table onevent handlers are ready and available for user interaction
 // once buttons are clicked, all associated functions in pair with onevent handlers,
@@ -20,7 +21,6 @@ function readyNow() {
     $('#table-contents').on('click', '.dButton', deleteEntry)
     // grab span id monthly cost and store into a variable
     // append our budget variable to el so we can display to dom the input salaries
-
 }
 
 
@@ -89,20 +89,17 @@ function deleteEntry() {
     monthly();
 }
 
-// 
+
 function monthly() {
     console.log('------------------- in monthly -------------------');
     let sum = 0;
-    let el = $('#totalMonth');
-    el.empty();
     for (let i = 0; i < totalSalary.length; i++) {
-        sum += totalSalary[i];
+        sum += Number(totalSalary[i]);
 
     }
     let sumMonthly = Math.round(sum / 12);
-    $('#totalMonth').append(`Total Monthly: $ <span id="monthlyCost">${sumMonthly}</span>`);
+    $('#monthlyCost').text(`${sumMonthly}`);
     if (sumMonthly > 20000) {
-        console.log('conditional is working');
         $('#totalMonth').addClass('red');
     } else {
         $('#totalMonth').removeClass('red');
@@ -115,10 +112,9 @@ function monthly() {
 
 Able to add red background to total monthly box, however unable to remove the class.
 
-
 */
 
-
+// .text()
 
 
 // .addClass(‘class’) - https://api.jquery.com/addclass/
@@ -132,27 +128,7 @@ Able to add red background to total monthly box, however unable to remove the cl
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-/* YER RECAP NOTES:
-- Created index.html, style.css, client.js, and jquery.js files.
-- Appropriately sourced in the files to html file
-- created a header with h1 tag named Salary Calculator
-- created h3 tag outside of header named Add Employee
-- created div to contain all input elements together 
-- created 5 input elements with different ids, with a button tag
-
-- table tag created
-    - thead tag created, means table head
-        - h3 tag created to give table a name
-        - tr tag created, means table row, which spans horizontally
-            -th tag created, means table head, created 6 spaces
-        - closed tr tag
-    - closed thead tag
-    - created tbody, means table body, gave it an id to access the space on the DOM
-    - initially created the skeleton of td tags on it in order to 
-
-
-
-
+/* YER NOTES:
 
     element.closest() 
     https://www.youtube.com/watch?v=Eb5lyRn7lgk&ab_channel=dcode as courtesy of John
@@ -179,13 +155,12 @@ THE FOLLOWING CODE FROM https://api.jquery.com/closest/ helped a lot
 //   </li>
 //   <li class="item-iii">III</li>
 // </ul>
+
 // Suppose we perform a search for <ul> elements starting at item A:
 
 // $( "li.item-a" ).closest( "ul" ).css( "background-color", "red" );
 // This will change the color of the level-2 <ul>, since it is the first 
 // encountered when traveling up the DOM tree.
-
-
 
  */
 ////////////////////////////////////////////////////////////////////////////////////

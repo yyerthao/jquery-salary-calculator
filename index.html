@@ -40,9 +40,10 @@
                 </tr>
             </thead>
             <tbody id="table-contents">
+                <!-- jquery will fill in the rest with TD elements -->
             </tbody>
         </table>
-        <h3 id="totalMonth">Total Monthly: $ <span class="monthlyCost"></span></h3>
+        <h3 id="totalMonth">Total Monthly: $ <span id="monthlyCost"></span></h3>
     </div>
 </body>
 
@@ -53,18 +54,14 @@
 <!-- 
 
 NOTES:
-tr = (row) =   =   =   =   =
+tr = (row) 
 th is just the top header of all cells
-td = table data (column) ||   ||   ||   || 
-*** 
-
-
+td = table data (column) 
 
 - Used font.google.com to create library of font, linked it onto html file, courtesy of John, learned something new
 - had lots of confusion about the tags to create a table so this site cleared it up: https://stackoverflow.com/questions/5395228/html-tables-thead-vs-th#:~:text=The%20thead%20element%20should%20be,the%20tbody%20and%20tfoot%20elements.&text=You%20use%20to%20encapsulate,them%20as%20the%20Table%20Header.&text=%2C%20on%20the%20other,than%20an%20ordinary%20data%20cell.
 
-
-Keeping the syntax of a table here: 
+Keeping the syntax of a table here for visual 
 
      <table>
         <thead>

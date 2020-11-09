@@ -5,14 +5,15 @@ if selecting element with CLASS: .  */
 
 
 body {
-    background-color: white;
+    background-image: url("light.jpg");
     font-family: 'Open Sans Condensed',
         sans-serif;
 }
 
 #headerStyle {
-    background-color: pink;
-    padding: 15px;
+    background-color: #B0B0B0;
+    padding: 5px;
+    padding-left: 10px;
     text-align: left;
     font-family: 'Open Sans Condensed',
         sans-serif;
@@ -26,11 +27,15 @@ body {
 
 #btn-add {
     margin: 10px;
-    background-color: pink;
+    background-color: #B0B0B0;
 }
 
 
-table, tr, td, th, thead {
+table,
+tr,
+td,
+th,
+thead {
     border: solid black 2px;
     border-collapse: collapse;
 }
@@ -38,12 +43,12 @@ table, tr, td, th, thead {
 
 th {
     width: 140px;
-    background-color: pink;
+    background-color: #B0B0B0;
 }
 
 
 .inputDiv {
-    color: pink;
+    color: #B0B0B0;
     padding-left: 5px;
 }
 
@@ -55,12 +60,13 @@ h3 {
 #totalMonth {
     float: right;
     border: solid black 2px;
-}
+} 
 
 
 
 /* Created this tag in css file for javascript file to grab onto
 in our addClass  */
+
 .red {
     background-color: red;
 }
