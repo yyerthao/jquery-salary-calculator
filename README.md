@@ -3,7 +3,7 @@
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/yyerthao/jquery-salary-calculator.svg?style=flat-square)
 ![FORKS](https://img.shields.io/github/forks/yyerthao/jquery-salary-calculator.svg?style=social)
 
-# PROJECT NAME
+# Jquery Salary Calculator
 
 ## Description
 
@@ -14,11 +14,12 @@ This application allows user to add employees to see how much it will cost to pa
 ## Screen Shot
 
 ![intro](projectsalarycalculator.png)
+Image displays three employees with salary inputs.
+Total cost of salary input has exceeded this sample company's monthly budget of $20,000.00
 
 ## Installation
 
 1. Open the index.html onto browser
-
 
 ## Usage
 
