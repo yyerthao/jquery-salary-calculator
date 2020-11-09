@@ -12,8 +12,8 @@ body {
 
 #headerStyle {
     background-color: pink;
-    padding: 20px;
-    text-align: center;
+    padding: 15px;
+    text-align: left;
     font-family: 'Open Sans Condensed',
         sans-serif;
 }
